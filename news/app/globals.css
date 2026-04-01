@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors */
+  --navy: #0D1F4C;
+  --blue: #1A45A7;
+  --sky: #3B82F6;
+  --accent: #E63946;
+  --gold: #F4B942;
+  --white: #FAFBFF;
+  --light: #EEF2FF;
+  --muted: #8899CC;
+  --purple: #7C3AED;
+  
+  /* Semantic Colors */
+  --background: var(--white);
+  --foreground: var(--navy);
+}
+
+@theme inline {
+  /* Brand color palette */
+  --color-navy: var(--navy);
+  --color-blue: var(--blue);
+  --color-sky: var(--sky);
+  --color-accent: var(--accent);
+  --color-gold: var(--gold);
+  --color-white: var(--white);
+  --color-light: var(--light);
+  --color-muted: var(--muted);
+  --color-purple: var(--purple);
+  
+  /* Semantic colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--blue);
+  --color-secondary: var(--gold);
+  
+  /* Fonts */
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--navy);
+    --foreground: var(--white);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
