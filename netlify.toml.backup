@@ -1,0 +1,11 @@
+# Netlify configuration for Next.js website in /website subdirectory
+
+[build]
+  base = "website"
+  command = "npm run build"
+  publish = ".next"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nassau County Young Democrats
+
+This repository contains both a Next.js web application and a standalone landing page for the Nassau County Young Democrats.
+
+## Contents
+
+- **Next.js Application** (`/app`) - Main web application with news and events
+- **Landing Page** (`/public/youngdem.html`) - Standalone HTML page with links to join, vote, donate, and visit the main website
+
+## Features
+
+### Next.js App
+- News feed with filtering
+- Events calendar
+- Newsletter signup
+- Responsive design with Tailwind CSS
+
+### Landing Page
+- Privacy-first Google Analytics 4 with consent mode
+- Cookie consent banner
+- Animated UI elements
+- Direct links to key actions
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies and run the development server:
 
 ```bash
+npm install
 npm run dev
 # or
+yarn install
 yarn dev
 # or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the Next.js app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The standalone landing page can be accessed at [http://localhost:3000/youngdem.html](http://localhost:3000/youngdem.html).
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about Next.js, check out:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Learn Next.js](https://nextjs.org/learn)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+- Next.js app can be deployed via [Vercel Platform](https://vercel.com/new)
+- Landing page can be deployed via Netlify or any static hosting
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Analytics
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Google Analytics Measurement ID: G-7YTKWBP5SX
