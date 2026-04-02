@@ -104,12 +104,14 @@ export default function QuoteRotator({ variant = 'default', showIndicators = tru
   if (variant === 'hero') {
     return (
       <div className="text-center relative">
-        <p className={`text-2xl text-white/90 max-w-3xl mx-auto mb-8 italic transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}>
-          "{quotes[currentQuote].text}"
-        </p>
-        <p className={`text-sm text-white/75 mb-8 transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}>
-          {quotes[currentQuote].author}
-        </p>
+        <div className="min-h-[180px] flex flex-col justify-center">
+          <p className={`text-2xl text-white/90 max-w-3xl mx-auto mb-8 italic transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}>
+            "{quotes[currentQuote].text}"
+          </p>
+          <p className={`text-sm text-white/75 mb-8 transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}>
+            {quotes[currentQuote].author}
+          </p>
+        </div>
         {showIndicators && (
           <div className="flex gap-1.5 justify-center mb-6">
             {quotes.map((_, index) => (
@@ -130,7 +132,7 @@ export default function QuoteRotator({ variant = 'default', showIndicators = tru
   }
 
   return (
-    <div className="bg-light rounded-xl p-8 border-l-4 border-gold relative">
+    <div className="bg-light rounded-xl p-8 border-l-4 border-gold relative min-h-[220px]">
       {showIndicators && (
         <div className="absolute top-4 right-4 flex gap-1">
           {quotes.map((_, index) => (
@@ -145,16 +147,18 @@ export default function QuoteRotator({ variant = 'default', showIndicators = tru
           ))}
         </div>
       )}
-      <p 
-        className={`text-xl md:text-2xl text-navy italic mb-4 transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}
-      >
-        "{quotes[currentQuote].text}"
-      </p>
-      <p 
-        className={`text-sm text-muted transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}
-      >
-        {quotes[currentQuote].author}
-      </p>
+      <div className="flex flex-col justify-center min-h-[160px]">
+        <p 
+          className={`text-xl md:text-2xl text-navy italic mb-4 transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}
+        >
+          "{quotes[currentQuote].text}"
+        </p>
+        <p 
+          className={`text-sm text-muted transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}
+        >
+          {quotes[currentQuote].author}
+        </p>
+      </div>
       <p className="text-xs text-muted/60 mt-4 text-center">Use ← → arrow keys to navigate</p>
     </div>
   );
