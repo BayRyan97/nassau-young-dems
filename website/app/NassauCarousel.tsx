@@ -93,7 +93,7 @@ export default function NassauCarousel() {
   }, [goToNext]);
 
   useEffect(() => {
-    const interval = setInterval(goToNext, 6000);
+    const interval = setInterval(goToNext, 12000);
     return () => clearInterval(interval);
   }, [goToNext, resetTimer]); // Depend on resetTimer to restart the interval
 
