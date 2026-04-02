@@ -1,3 +1,5 @@
+import QuoteRotator from './QuoteRotator';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-light">
@@ -112,12 +114,7 @@ export default function Home() {
           </div>
 
           {/* Quote Section */}
-          <div className="bg-light rounded-xl p-8 border-l-4 border-gold">
-            <p className="text-xl md:text-2xl text-navy italic mb-4">
-              "Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it's the only thing that ever has."
-            </p>
-            <p className="text-sm text-muted">— Margaret Mead, anthropologist raised in NYC</p>
-          </div>
+          <QuoteRotator />
         </div>
       </section>
 
