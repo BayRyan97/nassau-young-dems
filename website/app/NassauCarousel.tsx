@@ -43,6 +43,7 @@ const photos = [
 export default function NassauCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
+  const [resetTimer, setResetTimer] = useState(0);
 
   const goToNext = useCallback(() => {
     setFade(false);
@@ -58,12 +59,18 @@ export default function NassauCarousel() {
       setCurrentIndex((prev) => (prev - 1 + photos.length) % photos.length);
       setFade(true);
     }, 300);
+    setResetTimer(prev => prev + 1); // Reset the timer
   }, []);
+
+  const goToNextManual = useCallback(() => {
+    goToNext();
+    setResetTimer(prev => prev + 1); // Reset the timer
+  }, [goToNext]);
 
   useEffect(() => {
     const interval = setInterval(goToNext, 6000);
     return () => clearInterval(interval);
-  }, [goToNext]);
+  }, [goToNext, resetTimer]); // Depend on resetTimer to restart the interval
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -72,13 +79,13 @@ export default function NassauCarousel() {
         goToPrev();
       } else if (e.key === 'ArrowRight') {
         e.preventDefault();
-        goToNext();
+        goToNextManual();
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [goToNext, goToPrev]);
+  }, [goToNext, goToPrev, goToNextManual]);
 
   const currentPhoto = photos[currentIndex];
 
@@ -104,7 +111,7 @@ export default function NassauCarousel() {
               </svg>
             </button>
             <button
-              onClick={goToNext}
+              onClick={goToNextManual}
               className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
               aria-label="Next photo"
             >
@@ -125,6 +132,7 @@ export default function NassauCarousel() {
                     setCurrentIndex(index);
                     setFade(true);
                   }, 300);
+                  setResetTimer(prev => prev + 1); // Reset the timer
                 }}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex ? 'bg-blue w-8' : 'bg-gray-300 w-2 hover:bg-gray-400'
