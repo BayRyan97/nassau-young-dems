@@ -9,31 +9,37 @@ export default function Home() {
               <h1 className="text-3xl font-serif text-white">
                 Nassau County <span className="text-gold italic">Young Democrats</span>
               </h1>
-              <p className="text-muted text-sm mt-1 uppercase tracking-wide">Local Political News & Events</p>
+              <p className="text-muted text-sm mt-1 uppercase tracking-wide">Organizing Young Progressives on Long Island</p>
             </div>
             <nav className="hidden md:flex gap-6">
-              <a href="#news" className="text-white hover:text-gold transition-colors">News</a>
-              <a href="#events" className="text-white hover:text-gold transition-colors">Events</a>
-              <a href="#about" className="text-white hover:text-gold transition-colors">About</a>
+              <a href="#news" className="text-white hover:text-gold transition-colors">Our Priorities</a>
+              <a href="#events" className="text-white hover:text-gold transition-colors">Next Meeting</a>
+              <a href="https://forms.gle/dXRQqGqBEz4PZEG49" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">Get Involved</a>
             </nav>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue to-sky text-white py-16 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-blue to-sky text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(59,130,246,0.18)_0%,transparent_70%)] pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-4">
-              Latest Updates
-            </span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
-              Stay Informed on Nassau County Politics
+            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6">
+              Organizing for Change<br />in Nassau County
             </h2>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Breaking news, upcoming events, and community updates from your local Young Democrats
+            <p className="text-2xl text-white/90 max-w-3xl mx-auto mb-8 italic">
+              "The future belongs to young people with an education and the imagination to create."
             </p>
+            <p className="text-sm text-white/75 mb-8">— President Bill Clinton, Long Island native</p>
+            <a 
+              href="https://forms.gle/dXRQqGqBEz4PZEG49"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 bg-gold text-navy font-bold rounded-lg hover:bg-yellow-400 transition-colors shadow-lg"
+            >
+              Join Us April 9th →
+            </a>
           </div>
         </div>
       </section>
@@ -41,67 +47,38 @@ export default function Home() {
       {/* News Feed Section */}
       <section id="news" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-serif font-bold text-navy">Latest News</h2>
-          <div className="flex gap-2">
-            <button className="px-4 py-2 bg-blue text-white rounded-lg hover:bg-sky transition-colors">All</button>
-            <button className="px-4 py-2 bg-white text-navy rounded-lg hover:bg-light transition-colors border border-navy/10">Local</button>
-            <button className="px-4 py-2 bg-white text-navy rounded-lg hover:bg-light transition-colors border border-navy/10">State</button>
-          </div>
+          <h2 className="text-3xl font-serif font-bold text-navy">What We're Fighting For</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Sample News Card 1 */}
-          <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden group">
-            <div className="h-48 bg-gradient-to-br from-blue to-sky"></div>
-            <div className="p-6">
-              <span className="text-xs text-blue font-semibold uppercase tracking-wide">Local News</span>
-              <h3 className="text-xl font-bold text-navy mt-2 mb-3 group-hover:text-blue transition-colors">
-                Community Organizing Event Draws Record Attendance
-              </h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Over 200 young democrats gathered at the Nassau County Civic Center to discuss upcoming initiatives...
-              </p>
-              <div className="flex justify-between items-center text-sm text-muted">
-                <span>Mar 28, 2026</span>
-                <a href="#" className="text-blue hover:text-sky font-medium">Read More →</a>
-              </div>
-            </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Priority 1 */}
+          <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 border-t-4 border-blue">
+            <h3 className="text-xl font-bold text-navy mb-3">
+              Climate Action
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Protecting Long Island's coastlines and pushing for renewable energy initiatives across Nassau County.
+            </p>
           </article>
 
-          {/* Sample News Card 2 */}
-          <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden group">
-            <div className="h-48 bg-gradient-to-br from-accent to-red-400"></div>
-            <div className="p-6">
-              <span className="text-xs text-accent font-semibold uppercase tracking-wide">Election Updates</span>
-              <h3 className="text-xl font-bold text-navy mt-2 mb-3 group-hover:text-blue transition-colors">
-                Voter Registration Drive Reaches Milestone
-              </h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Our voter registration campaign successfully registered 500+ new voters across Nassau County...
-              </p>
-              <div className="flex justify-between items-center text-sm text-muted">
-                <span>Mar 25, 2026</span>
-                <a href="#" className="text-blue hover:text-sky font-medium">Read More →</a>
-              </div>
-            </div>
+          {/* Priority 2 */}
+          <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 border-t-4 border-accent">
+            <h3 className="text-xl font-bold text-navy mb-3">
+              Voting Rights
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Registering voters, fighting suppression, and ensuring every voice in Nassau County is heard.
+            </p>
           </article>
 
-          {/* Sample News Card 3 */}
-          <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow overflow-hidden group">
-            <div className="h-48 bg-gradient-to-br from-green-600 to-green-400"></div>
-            <div className="p-6">
-              <span className="text-xs text-green-600 font-semibold uppercase tracking-wide">Policy</span>
-              <h3 className="text-xl font-bold text-navy mt-2 mb-3 group-hover:text-blue transition-colors">
-                New Climate Initiative Proposed for Nassau
-              </h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Local leaders unveil comprehensive plan to address climate change and promote sustainable development...
-              </p>
-              <div className="flex justify-between items-center text-sm text-muted">
-                <span>Mar 22, 2026</span>
-                <a href="#" className="text-blue hover:text-sky font-medium">Read More →</a>
-              </div>
-            </div>
+          {/* Priority 3 */}
+          <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 border-t-4 border-green-600">
+            <h3 className="text-xl font-bold text-navy mb-3">
+              Economic Justice
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Advocating for fair wages, affordable housing, and economic opportunity for all Long Islanders.
+            </p>
           </article>
         </div>
       </section>
@@ -109,37 +86,37 @@ export default function Home() {
       {/* Events Section */}
       <section id="events" className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif font-bold text-navy mb-8">Upcoming Events</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Sample Event 1 */}
-            <div className="bg-light rounded-xl p-6 border-l-4 border-blue hover:shadow-lg transition-shadow">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-16 h-16 bg-blue text-white rounded-lg flex flex-col items-center justify-center">
-                  <span className="text-2xl font-bold">15</span>
-                  <span className="text-xs">APR</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-navy mb-1">Monthly Strategy Meeting</h3>
-                  <p className="text-sm text-muted mb-2">7:00 PM - Nassau County Civic Center</p>
-                  <p className="text-sm text-gray-600">Join us for our monthly planning session and community updates.</p>
-                </div>
+          <h2 className="text-3xl font-serif font-bold text-navy mb-8">Next Meeting</h2>
+          
+          {/* Featured Event - April 9th Meeting */}
+          <div className="bg-gradient-to-r from-blue to-sky rounded-2xl p-8 text-white mb-8 shadow-xl">
+            <div className="flex flex-col md:flex-row gap-6 items-center">
+              <div className="flex-shrink-0 w-24 h-24 bg-white/20 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center border-2 border-white/30">
+                <span className="text-4xl font-bold">9</span>
+                <span className="text-sm uppercase tracking-wide">April</span>
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-2xl md:text-3xl font-bold mb-2">Monthly General Meeting</h3>
+                <p className="text-lg text-white/90 mb-1">6:30 PM • Nassau County Democratic Committee Office</p>
+                <p className="text-white/75 text-sm mb-4">Join us to organize, connect, and plan our next actions.</p>
+                <a 
+                  href="https://forms.gle/dXRQqGqBEz4PZEG49"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-6 py-3 bg-white text-blue font-bold rounded-lg hover:bg-gold hover:text-navy transition-colors"
+                >
+                  RSVP Now →
+                </a>
               </div>
             </div>
+          </div>
 
-            {/* Sample Event 2 */}
-            <div className="bg-light rounded-xl p-6 border-l-4 border-accent hover:shadow-lg transition-shadow">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-16 h-16 bg-accent text-white rounded-lg flex flex-col items-center justify-center">
-                  <span className="text-2xl font-bold">22</span>
-                  <span className="text-xs">APR</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-navy mb-1">Phone Banking Event</h3>
-                  <p className="text-sm text-muted mb-2">6:00 PM - Virtual</p>
-                  <p className="text-sm text-gray-600">Help us reach voters and share information about upcoming elections.</p>
-                </div>
-              </div>
-            </div>
+          {/* Quote Section */}
+          <div className="bg-light rounded-xl p-8 border-l-4 border-gold">
+            <p className="text-xl md:text-2xl text-navy italic mb-4">
+              "Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it's the only thing that ever has."
+            </p>
+            <p className="text-sm text-muted">— Margaret Mead, anthropologist raised in NYC</p>
           </div>
         </div>
       </section>
@@ -147,21 +124,26 @@ export default function Home() {
       {/* Newsletter CTA */}
       <section className="bg-gradient-to-r from-navy to-blue text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-serif font-bold mb-4">Stay in the Loop</h2>
-          <p className="text-white/90 mb-8">Get the latest news and event updates delivered to your inbox</p>
-          <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input 
-              type="email" 
-              placeholder="Enter your email" 
-              className="flex-1 px-6 py-3 rounded-lg text-navy focus:outline-none focus:ring-2 focus:ring-gold"
-            />
-            <button 
-              type="submit"
-              className="px-8 py-3 bg-gold text-navy font-semibold rounded-lg hover:bg-yellow-400 transition-colors"
+          <h2 className="text-3xl font-serif font-bold mb-4">Get Involved</h2>
+          <p className="text-white/90 mb-8">Stay updated on meetings, actions, and ways to make a difference in Nassau County</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a 
+              href="https://forms.gle/dXRQqGqBEz4PZEG49"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-gold text-navy font-bold rounded-lg hover:bg-yellow-400 transition-colors shadow-lg"
             >
-              Subscribe
-            </button>
-          </form>
+              Join Our Next Meeting
+            </a>
+            <a 
+              href="https://mailchi.mp/85b597e87fc3/join-the-nassau-county-young-democrats"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg hover:bg-white/20 transition-colors border border-white/20"
+            >
+              Become a Member
+            </a>
+          </div>
         </div>
       </section>
 
@@ -171,22 +153,21 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="text-xl font-serif font-bold text-gold mb-4">Nassau County Young Democrats</h3>
-              <p className="text-muted text-sm">Empowering young voices in Nassau County politics.</p>
+              <p className="text-muted text-sm">Building progressive power on Long Island.</p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
+              <h4 className="font-semibold mb-4">Take Action</h4>
               <ul className="space-y-2 text-sm text-muted">
-                <li><a href="#" className="hover:text-gold transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-gold transition-colors">Get Involved</a></li>
-                <li><a href="#" className="hover:text-gold transition-colors">Contact</a></li>
+                <li><a href="https://forms.gle/dXRQqGqBEz4PZEG49" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">RSVP for April 9th</a></li>
+                <li><a href="https://mailchi.mp/85b597e87fc3/join-the-nassau-county-young-democrats" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Become a Member</a></li>
+                <li><a href="https://secure.actblue.com/donate/nassauyoungdems" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Donate</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Connect</h4>
               <ul className="space-y-2 text-sm text-muted">
-                <li><a href="#" className="hover:text-gold transition-colors">Twitter</a></li>
-                <li><a href="#" className="hover:text-gold transition-colors">Instagram</a></li>
-                <li><a href="#" className="hover:text-gold transition-colors">Facebook</a></li>
+                <li><a href="https://www.nassauyoungdems.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Website</a></li>
+                <li><a href="mailto:info@nassauyoungdems.com" className="hover:text-gold transition-colors">Contact Us</a></li>
               </ul>
             </div>
           </div>
