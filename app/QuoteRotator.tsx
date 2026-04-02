@@ -8,10 +8,6 @@ const quotes = [
     author: "— Margaret Mead, anthropologist raised in NYC"
   },
   {
-    text: "The future belongs to young people with an education and the imagination to create.",
-    author: "— President Bill Clinton, Long Island native"
-  },
-  {
     text: "We convince by our presence.",
     author: "— Walt Whitman, Long Island poet"
   },
