@@ -9,6 +9,31 @@ const photos = [
     description: 'Home to the world-famous Bethpage Black Course, this public golf facility has hosted multiple U.S. Open Championships. It represents Nassau County\'s commitment to accessible recreation and world-class public amenities for all residents.'
   },
   {
+    src: '/nassau-photos/jones-beach.jpg.webp',
+    title: 'Jones Beach State Park',
+    description: 'One of America\'s most beloved beaches, Jones Beach welcomes millions of visitors each year. Protecting our coastline from rising sea levels and ensuring public beach access for all families is a cornerstone of environmental justice and quality of life on Long Island.'
+  },
+  {
+    src: '/nassau-photos/TheBoardwalk-Beach.jpg',
+    title: 'Long Beach Boardwalk',
+    description: 'The iconic Long Beach boardwalk is a vibrant hub for recreation, small businesses, and community life. After Superstorm Sandy, its rebuild demonstrated our resilience and commitment to coastal communities facing climate change.'
+  },
+  {
+    src: '/nassau-photos/Eisenhower_Park.jpg',
+    title: 'Eisenhower Park',
+    description: 'Nassau County\'s largest public park, offering 930 acres of green space, sports facilities, and gathering places. Public parks like Eisenhower are essential for community health, environmental sustainability, and accessible recreation for all residents regardless of income.'
+  },
+  {
+    src: '/nassau-photos/J.20Stephen20Conn_flickr_Sagamore20Hill.jpg.avif',
+    title: 'Sagamore Hill',
+    description: 'Theodore Roosevelt\'s beloved home in Oyster Bay, where the 26th President championed progressive causes and environmental conservation. TR\'s legacy of trust-busting, workers\' rights, and protecting natural resources continues to inspire our movement today.'
+  },
+  {
+    src: '/nassau-photos/Planting_Fields.jpg',
+    title: 'Planting Fields Arboretum',
+    description: 'This stunning 409-acre Gold Coast estate turned public garden showcases Nassau County\'s natural beauty and commitment to environmental education. Preserving green spaces and making them accessible to all is vital for both ecological health and community wellbeing.'
+  },
+  {
     src: '/nassau-photos/Belmont_Park_td_(2021-12-19)_017_-_UBS_Arena.jpg',
     title: 'UBS Arena at Belmont Park',
     description: 'Nassau County\'s newest entertainment destination, home to the New York Islanders. This state-of-the-art arena symbolizes our region\'s economic growth and modern infrastructure, creating jobs and bringing world-class entertainment to Long Island.'
