@@ -124,6 +124,155 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Nassau County Photo Gallery */}
+      <section className="bg-gradient-to-b from-white to-light py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-serif font-bold text-navy mb-4">Our Nassau County</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              From historic landmarks to modern venues, Nassau County is our home—and we're fighting to make it better for everyone.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Photo 1 - Castle Gould */}
+            <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]">
+              <img 
+                src="/nassau-photos/1920px-Castle_Gould,_western_façade_(July_2020).jpg" 
+                alt="Castle Gould at Sands Point Preserve"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-white font-bold text-lg mb-1">Castle Gould</h3>
+                  <p className="text-white/80 text-sm">Historic Sands Point Preserve</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 2 - Hempstead House */}
+            <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]">
+              <img 
+                src="/nassau-photos/1920px-Hempstead_House,_southern_façade.jpg" 
+                alt="Hempstead House"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-white font-bold text-lg mb-1">Hempstead House</h3>
+                  <p className="text-white/80 text-sm">Landmark Gold Coast Estate</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 3 - UBS Arena */}
+            <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]">
+              <img 
+                src="/nassau-photos/Belmont_Park_td_(2021-12-19)_017_-_UBS_Arena.jpg" 
+                alt="UBS Arena at Belmont Park"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-white font-bold text-lg mb-1">UBS Arena</h3>
+                  <p className="text-white/80 text-sm">Belmont Park</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 4 - Bethpage Golf */}
+            <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]">
+              <img 
+                src="/nassau-photos/Bethpage_Golf_Course.jpg" 
+                alt="Bethpage State Park Golf Course"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-white font-bold text-lg mb-1">Bethpage State Park</h3>
+                  <p className="text-white/80 text-sm">World-Class Golf Course</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 5 - Waterfront Bays */}
+            <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]">
+              <img 
+                src="/nassau-photos/Hempstead,_Manhasset,_and_Little_Neck_bays.jpg" 
+                alt="Hempstead, Manhasset, and Little Neck Bays"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-white font-bold text-lg mb-1">Our Waterfront</h3>
+                  <p className="text-white/80 text-sm">Hempstead, Manhasset & Little Neck Bays</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 6 - Mineola LIRR */}
+            <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]">
+              <img 
+                src="/nassau-photos/Mineola_LIRR_station_at_sunset.jpg" 
+                alt="Mineola LIRR Station at Sunset"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-white font-bold text-lg mb-1">Mineola Station</h3>
+                  <p className="text-white/80 text-sm">LIRR Transit Hub</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 7 - Nassau Coliseum */}
+            <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]">
+              <img 
+                src="/nassau-photos/Nassau_Coliseum_2021.jpg" 
+                alt="Nassau Veterans Memorial Coliseum"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-white font-bold text-lg mb-1">Nassau Coliseum</h3>
+                  <p className="text-white/80 text-sm">Iconic Veterans Memorial Arena</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 8 - TR Building */}
+            <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]">
+              <img 
+                src="/nassau-photos/TR_Exec_&_Leg_Bldg_1550_Franklin_Av_straight_hen.jpg" 
+                alt="Theodore Roosevelt Executive and Legislative Building"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-white font-bold text-lg mb-1">County Government</h3>
+                  <p className="text-white/80 text-sm">Theodore Roosevelt Building, Mineola</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 9 - Highway */}
+            <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[4/3]">
+              <img 
+                src="/nassau-photos/Int495eRoad-Exit41S-NY106sNY107s_(31061511095).jpg" 
+                alt="Long Island Expressway Interchange"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-white font-bold text-lg mb-1">Our Infrastructure</h3>
+                  <p className="text-white/80 text-sm">I-495 Interchange</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Events Section */}
       <section id="events" className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
