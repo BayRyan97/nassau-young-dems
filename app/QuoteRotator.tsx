@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 const quotes = [
   {
@@ -53,34 +53,98 @@ const quotes = [
   }
 ];
 
-export default function QuoteRotator() {
+interface QuoteRotatorProps {
+  variant?: 'hero' | 'default';
+  showIndicators?: boolean;
+}
+
+export default function QuoteRotator({ variant = 'default', showIndicators = true }: QuoteRotatorProps) {
   const [currentQuote, setCurrentQuote] = useState(0);
   const [fade, setFade] = useState(true);
 
+  const changeQuote = useCallback((newIndex: number) => {
+    setFade(false);
+    setTimeout(() => {
+      setCurrentQuote(newIndex);
+      setFade(true);
+    }, 300);
+  }, []);
+
+  const nextQuote = useCallback(() => {
+    changeQuote((currentQuote + 1) % quotes.length);
+  }, [currentQuote, changeQuote]);
+
+  const prevQuote = useCallback(() => {
+    changeQuote((currentQuote - 1 + quotes.length) % quotes.length);
+  }, [currentQuote, changeQuote]);
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setFade(false);
-      setTimeout(() => {
-        setCurrentQuote((prev) => (prev + 1) % quotes.length);
-        setFade(true);
-      }, 300);
+      nextQuote();
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [nextQuote]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        prevQuote();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        nextQuote();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [nextQuote, prevQuote]);
+
+  if (variant === 'hero') {
+    return (
+      <div className="text-center relative">
+        <p className={`text-2xl text-white/90 max-w-3xl mx-auto mb-8 italic transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}>
+          "{quotes[currentQuote].text}"
+        </p>
+        <p className={`text-sm text-white/75 mb-8 transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}>
+          {quotes[currentQuote].author}
+        </p>
+        {showIndicators && (
+          <div className="flex gap-1.5 justify-center mb-6">
+            {quotes.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => changeQuote(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  index === currentQuote ? 'bg-gold w-6' : 'bg-white/30 w-2 hover:bg-white/50'
+                }`}
+                aria-label={`Go to quote ${index + 1}`}
+              />
+            ))}
+          </div>
+        )}
+        <p className="text-xs text-white/50 mb-4">Use ← → arrow keys to navigate</p>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-light rounded-xl p-8 border-l-4 border-gold relative">
-      <div className="absolute top-4 right-4 flex gap-1">
-        {quotes.map((_, index) => (
-          <div 
-            key={index}
-            className={`h-1.5 w-1.5 rounded-full transition-all duration-300 ${
-              index === currentQuote ? 'bg-gold w-4' : 'bg-muted/30'
-            }`}
-          />
-        ))}
-      </div>
+      {showIndicators && (
+        <div className="absolute top-4 right-4 flex gap-1">
+          {quotes.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => changeQuote(index)}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                index === currentQuote ? 'bg-gold w-4' : 'bg-muted/30 w-1.5 hover:bg-muted/50'
+              }`}
+              aria-label={`Go to quote ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
       <p 
         className={`text-xl md:text-2xl text-navy italic mb-4 transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}
       >
@@ -91,6 +155,7 @@ export default function QuoteRotator() {
       >
         {quotes[currentQuote].author}
       </p>
+      <p className="text-xs text-muted/60 mt-4 text-center">Use ← → arrow keys to navigate</p>
     </div>
   );
 }

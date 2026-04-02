@@ -30,10 +30,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6">
               Organizing for Change<br />in Nassau County
             </h2>
-            <p className="text-2xl text-white/90 max-w-3xl mx-auto mb-8 italic">
-              "The future belongs to young people with an education and the imagination to create."
-            </p>
-            <p className="text-sm text-white/75 mb-8">— President Bill Clinton, Long Island native</p>
+            <QuoteRotator variant="hero" />
             <a 
               href="https://forms.gle/dXRQqGqBEz4PZEG49"
               target="_blank"
