@@ -12,6 +12,26 @@ const quotes = [
     author: "— President Bill Clinton, Long Island native"
   },
   {
+    text: "We convince by our presence.",
+    author: "— Walt Whitman, Long Island poet"
+  },
+  {
+    text: "If I am to speak for ten minutes, I need a week for preparation; if fifteen minutes, three days; if half an hour, two days; if an hour, I am ready now.",
+    author: "— President Theodore Roosevelt, Oyster Bay, Long Island"
+  },
+  {
+    text: "If they don't give you a seat at the table, bring a folding chair.",
+    author: "— Shirley Chisholm, Brooklyn congresswoman"
+  },
+  {
+    text: "Fight for the things that you care about, but do it in a way that will lead others to join you.",
+    author: "— Justice Ruth Bader Ginsburg, Brooklyn native"
+  },
+  {
+    text: "The future belongs to those who believe in the beauty of their dreams.",
+    author: "— Eleanor Roosevelt, NYC"
+  },
+  {
     text: "Change will not come if we wait for some other person or some other time. We are the ones we've been waiting for.",
     author: "— President Barack Obama"
   },
@@ -20,8 +40,16 @@ const quotes = [
     author: "— Rep. John Lewis"
   },
   {
-    text: "The power of the people is stronger than the people in power.",
-    author: "— Wael Ghonim"
+    text: "You may not always have a comfortable life and you will not always be able to solve all of the world's problems at once but don't ever underestimate the importance you can have.",
+    author: "— Marian Wright Edelman, civil rights activist"
+  },
+  {
+    text: "Hope will never be silent.",
+    author: "— Harvey Milk"
+  },
+  {
+    text: "The arc of the moral universe is long, but it bends toward justice.",
+    author: "— Dr. Martin Luther King Jr."
   }
 ];
 
