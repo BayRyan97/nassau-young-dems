@@ -46,6 +46,22 @@ const quotes = [
   {
     text: "The arc of the moral universe is long, but it bends toward justice.",
     author: "— Dr. Martin Luther King Jr."
+  },
+  {
+    text: "It's so important to never limit yourself, to find yourself in a box.",
+    author: "— Ashanti, Glen Cove native"
+  },
+  {
+    text: "The ones who become stars or superstars are the ones who have a head on their shoulders and know how to use it.",
+    author: "— Julius Erving, Roosevelt, Long Island"
+  },
+  {
+    text: "You have to always continue to strive no matter how hard things get, no matter how troubled you feel. No matter how tough things get, no matter how many times you lose, you keep trying to win.",
+    author: "— LL Cool J, Bay Shore, Long Island"
+  },
+  {
+    text: "Nothing is casual. Everything requires work, research, and thought. Agonize. Take it seriously... There is no such thing as a shortcut if you are going to turn in good work.",
+    author: "— Howard Stern, Jackson Heights, Queens"
   }
 ];
 
