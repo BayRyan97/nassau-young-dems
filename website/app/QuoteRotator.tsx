@@ -63,21 +63,31 @@ export default function QuoteRotator() {
       setTimeout(() => {
         setCurrentQuote((prev) => (prev + 1) % quotes.length);
         setFade(true);
-      }, 500);
-    }, 8000);
+      }, 300);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="bg-light rounded-xl p-8 border-l-4 border-gold">
+    <div className="bg-light rounded-xl p-8 border-l-4 border-gold relative">
+      <div className="absolute top-4 right-4 flex gap-1">
+        {quotes.map((_, index) => (
+          <div 
+            key={index}
+            className={`h-1.5 w-1.5 rounded-full transition-all duration-300 ${
+              index === currentQuote ? 'bg-gold w-4' : 'bg-muted/30'
+            }`}
+          />
+        ))}
+      </div>
       <p 
-        className={`text-xl md:text-2xl text-navy italic mb-4 transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}
+        className={`text-xl md:text-2xl text-navy italic mb-4 transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}
       >
         "{quotes[currentQuote].text}"
       </p>
       <p 
-        className={`text-sm text-muted transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}
+        className={`text-sm text-muted transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}
       >
         {quotes[currentQuote].author}
       </p>
