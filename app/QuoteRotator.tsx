@@ -16,7 +16,7 @@ const quotes = [
     author: "— Walt Whitman, Long Island poet"
   },
   {
-    text: "If I am to speak for ten minutes, I need a week for preparation; if fifteen minutes, three days; if half an hour, two days; if an hour, I am ready now.",
+    text: "In any moment of decision, the best thing you can do is the right thing, the next best thing is the wrong thing, and the worst thing you can do is nothing.",
     author: "— President Theodore Roosevelt, Oyster Bay, Long Island"
   },
   {
