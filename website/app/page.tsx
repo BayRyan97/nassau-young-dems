@@ -1,5 +1,6 @@
 import QuoteRotator from './QuoteRotator';
 import NassauCarousel from './NassauCarousel';
+import EventsCalendar from './EventsCalendar';
 
 export default function Home() {
   return (
@@ -136,6 +137,19 @@ export default function Home() {
           </div>
 
           <NassauCarousel />
+        </div>
+      </section>
+
+      {/* Events Calendar Section */}
+      <section className="bg-gradient-to-b from-light to-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-serif font-bold text-navy mb-4">Events Calendar</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Mark your calendar and join us at upcoming meetings, actions, and community events.
+            </p>
+          </div>
+          <EventsCalendar />
         </div>
       </section>
 
