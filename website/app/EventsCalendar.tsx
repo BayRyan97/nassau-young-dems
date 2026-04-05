@@ -105,45 +105,45 @@ export default function EventsCalendar() {
   const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-3xl mx-auto">
       {/* Calendar Header */}
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-4">
         <button
           onClick={goToPrevMonth}
-          className="p-2 rounded-lg hover:bg-navy/10 transition-colors group"
+          className="p-1.5 rounded-lg hover:bg-navy/10 dark:hover:bg-white/10 transition-colors group"
           aria-label="Previous month"
         >
-          <svg className="w-6 h-6 text-navy group-hover:text-blue transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 text-navy dark:text-white group-hover:text-blue transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
         
-        <h3 className="text-2xl md:text-3xl font-serif font-bold text-navy">
+        <h3 className="text-xl md:text-2xl font-serif font-bold text-navy dark:text-white">
           {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
         </h3>
         
         <button
           onClick={goToNextMonth}
-          className="p-2 rounded-lg hover:bg-navy/10 transition-colors group"
+          className="p-1.5 rounded-lg hover:bg-navy/10 dark:hover:bg-white/10 transition-colors group"
           aria-label="Next month"
         >
-          <svg className="w-6 h-6 text-navy group-hover:text-blue transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 text-navy dark:text-white group-hover:text-blue transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
       </div>
 
       {/* Day Names Header */}
-      <div className="grid grid-cols-7 gap-1 md:gap-2 mb-2">
+      <div className="grid grid-cols-7 gap-0.5 md:gap-1 mb-1">
         {dayNames.map(day => (
-          <div key={day} className="text-center text-sm font-bold text-navy/70 py-2">
+          <div key={day} className="text-center text-xs font-bold text-navy/70 dark:text-white/70 py-1">
             {day}
           </div>
         ))}
       </div>
 
       {/* Calendar Grid */}
-      <div className="grid grid-cols-7 gap-1 md:gap-2">
+      <div className="grid grid-cols-7 gap-0.5 md:gap-1">
         {calendarDays.map((day, index) => {
           const dayEvents = day ? getEventsForDay(day) : [];
           const hasEvents = dayEvents.length > 0;
@@ -152,9 +152,9 @@ export default function EventsCalendar() {
             <div
               key={index}
               className={`
-                aspect-square border border-gray-200 rounded-lg p-1 md:p-2 relative
-                ${day ? 'bg-white hover:bg-blue/5 transition-colors' : 'bg-gray-50'}
-                ${isToday(day || 0) ? 'ring-2 ring-blue' : ''}
+                aspect-square border rounded p-1 relative
+                ${day ? 'bg-white dark:bg-gray-800 hover:bg-blue/5 dark:hover:bg-blue/10 transition-colors border-gray-200 dark:border-gray-700' : 'bg-gray-50 dark:bg-gray-900/50 border-gray-100 dark:border-gray-800'}
+                ${isToday(day || 0) ? 'ring-1 ring-blue dark:ring-sky' : ''}
                 ${hasEvents ? 'cursor-pointer' : ''}
               `}
               onClick={() => {
@@ -166,15 +166,15 @@ export default function EventsCalendar() {
               {day && (
                 <>
                   <div className={`
-                    text-sm md:text-base font-semibold
-                    ${isToday(day) ? 'text-blue' : 'text-navy'}
+                    text-xs md:text-sm font-semibold
+                    ${isToday(day) ? 'text-blue dark:text-sky' : 'text-navy dark:text-white'}
                   `}>
                     {day}
                   </div>
                   
                   {/* Event Indicators */}
                   {hasEvents && (
-                    <div className="mt-1 flex flex-col gap-0.5">
+                    <div className="mt-0.5 flex flex-col gap-0.5">
                       {dayEvents.map((event, idx) => (
                         <div
                           key={event.id}
@@ -200,49 +200,49 @@ export default function EventsCalendar() {
           onClick={closeModal}
         >
           <div 
-            className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-fade-in"
+            className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full p-6 relative animate-fade-in"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 text-gray-400 hover:text-navy transition-colors"
+              className="absolute top-3 right-3 text-gray-400 hover:text-navy dark:hover:text-white transition-colors"
               aria-label="Close modal"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
 
             {/* Event Details */}
-            <div className="mb-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue to-sky rounded-xl flex flex-col items-center justify-center text-white shadow-lg">
-                  <span className="text-2xl font-bold">{selectedEvent.date.getDate()}</span>
-                  <span className="text-xs uppercase">
+            <div className="mb-4">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue to-sky rounded-xl flex flex-col items-center justify-center text-white shadow-lg">
+                  <span className="text-xl font-bold">{selectedEvent.date.getDate()}</span>
+                  <span className="text-[10px] uppercase">
                     {monthNames[selectedEvent.date.getMonth()].slice(0, 3)}
                   </span>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-serif font-bold text-navy">
+                  <h3 className="text-xl font-serif font-bold text-navy dark:text-white">
                     {selectedEvent.title}
                   </h3>
                 </div>
               </div>
 
-              <div className="space-y-3 text-gray-600">
+              <div className="space-y-2 text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-blue dark:text-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <span className="font-semibold">{selectedEvent.time}</span>
+                  <span className="font-semibold text-sm">{selectedEvent.time}</span>
                 </div>
                 
                 <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-blue dark:text-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  <span>
+                  <span className="text-sm">
                     {monthNames[selectedEvent.date.getMonth()]} {selectedEvent.date.getDate()}, {selectedEvent.date.getFullYear()}
                   </span>
                 </div>
@@ -255,7 +255,7 @@ export default function EventsCalendar() {
                 href={selectedEvent.rsvpLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue to-sky text-white font-bold rounded-lg hover:from-navy hover:to-blue transition-all shadow-lg"
+                className="block w-full text-center px-5 py-2.5 bg-gradient-to-r from-blue to-sky text-white font-bold rounded-lg hover:from-navy hover:to-blue transition-all shadow-lg text-sm"
               >
                 RSVP Now →
               </a>
@@ -265,7 +265,7 @@ export default function EventsCalendar() {
       )}
 
       {/* Keyboard navigation hint */}
-      <p className="text-center text-sm text-gray-500 mt-4">
+      <p className="text-center text-xs text-gray-500 dark:text-gray-400 mt-3">
         Use arrow keys to navigate months • Click events for details
       </p>
     </div>

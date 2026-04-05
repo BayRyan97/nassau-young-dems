@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand Colors */
+  /* Brand Colors - Light Mode */
   --navy: #0D1F4C;
   --blue: #1A45A7;
   --sky: #3B82F6;
@@ -16,6 +16,19 @@
   /* Semantic Colors */
   --background: var(--white);
   --foreground: var(--navy);
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+}
+
+/* Dark Mode */
+.dark {
+  --background: #0a0f1e;
+  --foreground: #f0f4f8;
+  --navy: #1a2332;
+  --light: #1a2332;
+  --card-bg: #1a2332;
+  --border: #2d3748;
+  --muted: #94a3b8;
 }
 
 @theme inline {
@@ -39,13 +52,6 @@
   /* Fonts */
   --font-serif: 'DM Serif Display', Georgia, serif;
   --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--navy);
-    --foreground: var(--white);
-  }
 }
 
 body {

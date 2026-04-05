@@ -1,24 +1,26 @@
 import QuoteRotator from './QuoteRotator';
-import NassauCarousel from './NassauCarousel';
+import NassauCarousel from'./NassauCarousel';
 import EventsCalendar from './EventsCalendar';
+import ThemeToggle from './ThemeToggle';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-light">
+    <div className="min-h-screen bg-light dark:bg-gray-900">
       {/* Header */}
-      <header className="bg-navy text-white shadow-lg sticky top-0 z-50">
+      <header className="bg-navy dark:bg-gray-800 text-white shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-3xl font-serif text-white">
                 Nassau County <span className="text-gold italic">Young Democrats</span>
               </h1>
-              <p className="text-muted text-sm mt-1 uppercase tracking-wide">Organizing Young Progressives on Long Island</p>
+              <p className="text-muted dark:text-gray-400 text-sm mt-1 uppercase tracking-wide">Organizing Young Progressives on Long Island</p>
             </div>
-            <nav className="hidden md:flex gap-6">
+            <nav className="hidden md:flex gap-6 items-center">
               <a href="#news" className="text-white hover:text-gold transition-colors">Our Priorities</a>
               <a href="#events" className="text-white hover:text-gold transition-colors">Next Meeting</a>
               <a href="https://forms.gle/dXRQqGqBEz4PZEG49" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">Get Involved</a>
+              <ThemeToggle />
             </nav>
           </div>
         </div>
@@ -141,11 +143,11 @@ export default function Home() {
       </section>
 
       {/* Events Calendar Section */}
-      <section className="bg-gradient-to-b from-light to-white py-16">
+      <section className="bg-gradient-to-b from-light to-white dark:from-gray-800 dark:to-gray-900 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-serif font-bold text-navy mb-4">Events Calendar</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-serif font-bold text-navy dark:text-white mb-3">Events Calendar</h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-sm">
               Mark your calendar and join us at upcoming meetings, actions, and community events.
             </p>
           </div>
@@ -154,7 +156,7 @@ export default function Home() {
       </section>
 
       {/* Events Section */}
-      <section id="events" className="bg-white py-16">
+      <section id="events" className="bg-white dark:bg-gray-800 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-serif font-bold text-navy mb-8">Next Meeting</h2>
           
