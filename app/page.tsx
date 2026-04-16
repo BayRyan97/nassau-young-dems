@@ -1,6 +1,7 @@
 import QuoteRotator from './QuoteRotator';
 import NassauCarousel from './NassauCarousel';
 import EventsCalendar from './EventsCalendar';
+import CandidateSpotlight from './CandidateSpotlight';
 
 export default function Home() {
   return (
@@ -126,8 +127,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Nassau County Photo Gallery */}
+      {/* Candidate Spotlight Section */}
       <section className="bg-gradient-to-b from-white to-light py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-serif font-bold text-navy mb-4">Candidate Spotlight</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Meet the progressive candidates we're supporting in this election. These are the leaders fighting for our values in Nassau County.
+            </p>
+          </div>
+          <CandidateSpotlight />
+        </div>
+      </section>
+
+      {/* Our Nassau County Photo Gallery */}
+      <section className="bg-gradient-to-b from-light to-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-serif font-bold text-navy mb-4">Our Nassau County</h2>
