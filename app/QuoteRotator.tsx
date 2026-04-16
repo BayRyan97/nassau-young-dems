@@ -83,20 +83,28 @@ export default function QuoteRotator({ variant = 'default', showIndicators = tru
   }, []);
 
   const nextQuote = useCallback(() => {
-    changeQuote((currentQuote + 1) % quotes.length);
-  }, [currentQuote, changeQuote]);
+    setCurrentQuote((prev) => (prev + 1) % quotes.length);
+  }, []);
 
   const prevQuote = useCallback(() => {
-    changeQuote((currentQuote - 1 + quotes.length) % quotes.length);
-  }, [currentQuote, changeQuote]);
+    setCurrentQuote((prev) => (prev - 1 + quotes.length) % quotes.length);
+  }, []);
 
   useEffect(() => {
+    setFade(false);
+    const fadeTimer = setTimeout(() => {
+      setFade(true);
+    }, 300);
+
     const interval = setInterval(() => {
       nextQuote();
     }, 5000);
 
-    return () => clearInterval(interval);
-  }, [nextQuote]);
+    return () => {
+      clearInterval(interval);
+      clearTimeout(fadeTimer);
+    };
+  }, [currentQuote, nextQuote]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {

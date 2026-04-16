@@ -68,34 +68,28 @@ const photos = [
 export default function NassauCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
-  const [resetTimer, setResetTimer] = useState(0);
 
   const goToNext = useCallback(() => {
-    setFade(false);
-    setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % photos.length);
-      setFade(true);
-    }, 300);
+    setCurrentIndex((prev) => (prev + 1) % photos.length);
   }, []);
 
   const goToPrev = useCallback(() => {
-    setFade(false);
-    setTimeout(() => {
-      setCurrentIndex((prev) => (prev - 1 + photos.length) % photos.length);
-      setFade(true);
-    }, 300);
-    setResetTimer(prev => prev + 1); // Reset the timer
+    setCurrentIndex((prev) => (prev - 1 + photos.length) % photos.length);
   }, []);
 
-  const goToNextManual = useCallback(() => {
-    goToNext();
-    setResetTimer(prev => prev + 1); // Reset the timer
-  }, [goToNext]);
-
   useEffect(() => {
+    setFade(false);
+    const fadeTimer = setTimeout(() => {
+      setFade(true);
+    }, 300);
+
     const interval = setInterval(goToNext, 12000);
-    return () => clearInterval(interval);
-  }, [goToNext, resetTimer]); // Depend on resetTimer to restart the interval
+    
+    return () => {
+      clearInterval(interval);
+      clearTimeout(fadeTimer);
+    };
+  }, [currentIndex, goToNext]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -104,13 +98,13 @@ export default function NassauCarousel() {
         goToPrev();
       } else if (e.key === 'ArrowRight') {
         e.preventDefault();
-        goToNextManual();
+        goToNext();
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [goToNext, goToPrev, goToNextManual]);
+  }, [goToNext, goToPrev]);
 
   const currentPhoto = photos[currentIndex];
 
@@ -136,7 +130,7 @@ export default function NassauCarousel() {
               </svg>
             </button>
             <button
-              onClick={goToNextManual}
+              onClick={goToNext}
               className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
               aria-label="Next photo"
             >
