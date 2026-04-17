@@ -40,7 +40,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-block px-8 py-4 bg-gold text-navy font-bold rounded-lg hover:bg-yellow-400 transition-colors shadow-lg"
             >
-              Join Us April 9th →
+              Get Involved →
             </a>
           </div>
         </div>
@@ -170,26 +170,22 @@ export default function Home() {
       {/* Events Section */}
       <section id="events" className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif font-bold text-navy mb-8">Next Meeting</h2>
+          <h2 className="text-3xl font-serif font-bold text-navy mb-8">Get Involved</h2>
           
-          {/* Featured Event - April 9th Meeting */}
+          {/* Call to Action */}
           <div className="bg-gradient-to-r from-blue to-sky rounded-2xl p-8 text-white mb-8 shadow-xl">
             <div className="flex flex-col md:flex-row gap-6 items-center">
-              <div className="flex-shrink-0 w-24 h-24 bg-white/20 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center border-2 border-white/30">
-                <span className="text-4xl font-bold">9</span>
-                <span className="text-sm uppercase tracking-wide">April</span>
-              </div>
               <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl md:text-3xl font-bold mb-2">Monthly General Meeting</h3>
-                <p className="text-lg text-white/90 mb-1">6:30 PM • Nassau County Democratic Committee Office</p>
-                <p className="text-white/75 text-sm mb-4">Join us to organize, connect, and plan our next actions.</p>
+                <h3 className="text-2xl md:text-3xl font-bold mb-2">Join Our Movement</h3>
+                <p className="text-lg text-white/90 mb-1">Monthly meetings at the Nassau County Democratic Committee Office</p>
+                <p className="text-white/75 text-sm mb-4">Connect with fellow young progressives, organize, and plan our next actions to build a better Nassau County.</p>
                 <a 
                   href="https://forms.gle/dXRQqGqBEz4PZEG49"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-6 py-3 bg-white text-blue font-bold rounded-lg hover:bg-gold hover:text-navy transition-colors"
                 >
-                  RSVP Now →
+                  Join Our Next Meeting →
                 </a>
               </div>
             </div>
@@ -237,7 +233,7 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Take Action</h4>
               <ul className="space-y-2 text-sm text-muted">
-                <li><a href="https://forms.gle/dXRQqGqBEz4PZEG49" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">RSVP for April 9th</a></li>
+                <li><a href="https://forms.gle/dXRQqGqBEz4PZEG49" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Join Our Next Meeting</a></li>
                 <li><a href="https://mailchi.mp/85b597e87fc3/join-the-nassau-county-young-democrats" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Become a Member</a></li>
                 <li><a href="https://secure.actblue.com/donate/nassauyoungdems" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Donate</a></li>
               </ul>
