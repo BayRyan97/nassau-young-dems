@@ -16,6 +16,8 @@ const events: CalendarEvent[] = [
   {
     id: 1,
     title: 'Monthly General Meeting',
+    date: new Date(2026, 3, 9), // April 9, 2026 (month is 0-indexed)
+    time: '6:30 PM',
     location: 'Nassau County Democratic Committee Office',
     rsvpLink: 'https://forms.gle/dXRQqGqBEz4PZEG49'
   },
