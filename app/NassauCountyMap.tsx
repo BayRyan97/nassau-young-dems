@@ -13,10 +13,6 @@ const TileLayer = dynamic(
   () => import('react-leaflet').then((mod) => mod.TileLayer),
   { ssr: false }
 );
-const GeoJSON = dynamic(
-  () => import('react-leaflet').then((mod) => mod.GeoJSON),
-  { ssr: false }
-);
 const Marker = dynamic(
   () => import('react-leaflet').then((mod) => mod.Marker),
   { ssr: false }
@@ -39,7 +35,6 @@ interface GeoJSONData {
 
 export default function NassauCountyMap() {
   const [mounted, setMounted] = useState(false);
-  const [countyBoundary, setCountyBoundary] = useState<GeoJSONData | null>(null);
   const [landmarks, setLandmarks] = useState<GeoJSONData | null>(null);
   const [L, setL] = useState<any>(null);
 
@@ -58,14 +53,12 @@ export default function NassauCountyMap() {
       });
     });
 
-    // Load GeoJSON data
-    Promise.all([
-      fetch('/data/nassau-county-boundary.json').then(res => res.json()),
-      fetch('/data/landmarks.json').then(res => res.json()),
-    ]).then(([boundary, landmarksData]) => {
-      setCountyBoundary(boundary);
-      setLandmarks(landmarksData);
-    });
+    // Load landmarks data
+    fetch('/data/landmarks.json')
+      .then(res => res.json())
+      .then(landmarksData => {
+        setLandmarks(landmarksData);
+      });
   }, []);
 
   if (!mounted || !L) {
@@ -93,7 +86,7 @@ export default function NassauCountyMap() {
             Nassau County Interactive Map
           </h2>
           <p className="text-lg text-gray-700 mb-6">
-            Explore Nassau County and our important civic locations. Click on markers to learn more.
+            Explore Nassau County's important civic locations, universities, and community centers. Click on markers to learn more.
           </p>
         </div>
 
@@ -109,19 +102,6 @@ export default function NassauCountyMap() {
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
               url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
             />
-
-            {/* County Boundary */}
-            {countyBoundary && (
-              <GeoJSON
-                data={countyBoundary}
-                style={{
-                  color: '#1A45A7',
-                  weight: 4,
-                  fillColor: '#1A45A7',
-                  fillOpacity: 0.1,
-                }}
-              />
-            )}
 
             {/* Landmarks */}
             {landmarks && landmarks.features.map((feature: GeoJSONFeature, index: number) => {
@@ -159,20 +139,14 @@ export default function NassauCountyMap() {
 
         {/* Legend */}
         <div className="mt-6 bg-white rounded-xl p-6 shadow-lg">
-          <h3 className="text-lg font-bold text-navy mb-4">Map Legend</h3>
-          <div className="flex items-center justify-center gap-8">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-1 bg-blue" style={{ borderWidth: '2px', borderColor: '#1A45A7' }}></div>
-              <span className="text-sm text-gray-700">Nassau County</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <img 
-                src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png" 
-                alt="Marker" 
-                className="w-6 h-6"
-              />
-              <span className="text-sm text-gray-700">Important Locations</span>
-            </div>
+          <h3 className="text-lg font-bold text-navy mb-4">Civic Locations</h3>
+          <div className="flex items-center justify-center gap-3">
+            <img 
+              src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png" 
+              alt="Marker" 
+              className="w-6 h-6"
+            />
+            <span className="text-sm text-gray-700">Click any marker to view details</span>
           </div>
         </div>
       </div>

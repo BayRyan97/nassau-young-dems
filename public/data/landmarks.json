@@ -90,13 +90,141 @@
       "type": "Feature",
       "properties": {
         "name": "Hofstra University",
-        "type": "Landmark",
+        "type": "University",
         "address": "Hempstead, NY",
         "description": "Major venue for civic engagement and political events"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [-73.5952, 40.7248]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adelphi University",
+        "type": "University",
+        "address": "1 South Avenue, Garden City, NY 11530",
+        "description": "Private university fostering civic leadership"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.6407, 40.7264]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nassau Community College",
+        "type": "Community College",
+        "address": "1 Education Drive, Garden City, NY 11530",
+        "description": "County's largest community college"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.6092, 40.7261]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eisenhower Park",
+        "type": "Public Park",
+        "address": "1899 Hempstead Turnpike, East Meadow, NY 11554",
+        "description": "Nassau County's largest park and community gathering space"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.5949, 40.7383]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jones Beach State Park",
+        "type": "State Park",
+        "address": "1 Ocean Parkway, Wantagh, NY 11793",
+        "description": "Iconic Long Island beach and event venue"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.5100, 40.5920]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Freeport Memorial Library",
+        "type": "Public Library",
+        "address": "144 W Merrick Rd, Freeport, NY 11520"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.5828, 40.6575]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hicksville Public Library",
+        "type": "Public Library",
+        "address": "169 Jerusalem Avenue, Hicksville, NY 11801"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.5251, 40.7648]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cradle of Aviation Museum",
+        "type": "Museum",
+        "address": "Charles Lindbergh Blvd, Garden City, NY 11530",
+        "description": "Aerospace museum celebrating Long Island's aviation history"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.6048, 40.7305]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Old Westbury Gardens",
+        "type": "Historic Site",
+        "address": "71 Old Westbury Road, Old Westbury, NY 11568",
+        "description": "Historic Gold Coast estate and gardens"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.5896, 40.7889]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sagamore Hill National Historic Site",
+        "type": "Historic Site",
+        "address": "20 Sagamore Hill Road, Oyster Bay, NY 11771",
+        "description": "Theodore Roosevelt's summer White House"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.4991, 40.8857]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nassau County Legislature",
+        "type": "County Government",
+        "address": "1550 Franklin Avenue, Mineola, NY 11501",
+        "description": "Where county laws are debated and passed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.6400, 40.7495]
       }
     }
   ]
