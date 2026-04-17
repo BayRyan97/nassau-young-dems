@@ -51,9 +51,7 @@ const events: CalendarEvent[] = [
     date: new Date(2026, 6, 8), // July 8, 2026
     time: '7:00 PM',
     location: 'Citi Field',
-    cost: '$40 per ticketame Night',
-    date: new Date(2026, 6, 8), // July 8, 2026
-    time: '7:00 PM',
+    cost: '$40 per ticket',
     rsvpLink: 'https://forms.gle/dXRQqGqBEz4PZEG49'
   }
 ];
