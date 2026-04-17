@@ -1,0 +1,103 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hempstead Town Hall",
+        "type": "Town Hall",
+        "address": "1 Washington Street, Hempstead, NY 11550"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.6187, 40.7062]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oyster Bay Town Hall",
+        "type": "Town Hall",
+        "address": "54 Audrey Avenue, Oyster Bay, NY 11771"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.5321, 40.8657]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "North Hempstead Town Hall",
+        "type": "Town Hall",
+        "address": "220 Plandome Road, Manhasset, NY 11030"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.6995, 40.7979]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Glen Cove City Hall",
+        "type": "City Hall",
+        "address": "9 Glen Street, Glen Cove, NY 11542"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.6343, 40.8623]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Long Beach City Hall",
+        "type": "City Hall",
+        "address": "1 W Chester Street, Long Beach, NY 11561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.6579, 40.5886]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Theodore Roosevelt Executive & Legislative Building",
+        "type": "County Government",
+        "address": "1550 Franklin Avenue, Mineola, NY 11501",
+        "description": "Nassau County Government Center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.6407, 40.7490]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nassau County Democratic Committee",
+        "type": "Democratic HQ",
+        "address": "Mineola, NY"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.6395, 40.7478]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hofstra University",
+        "type": "Landmark",
+        "address": "Hempstead, NY",
+        "description": "Major venue for civic engagement and political events"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.5952, 40.7248]
+      }
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
+@import "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
 
 :root {
   /* Brand Colors */
@@ -71,3 +72,45 @@ body {
 .animate-fade-in {
   animation: fade-in 0.2s ease-out;
 }
+
+/* Leaflet Map Customization */
+.leaflet-container {
+  font-family: var(--font-sans);
+  background: #EEF2FF;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(13, 31, 76, 0.15);
+  border: 2px solid var(--gold);
+}
+
+.leaflet-popup-content {
+  margin: 16px;
+  font-family: var(--font-sans);
+  color: var(--navy);
+}
+
+.leaflet-popup-tip {
+  background: white;
+}
+
+.leaflet-control-zoom a {
+  background: white;
+  color: var(--navy);
+  border: 2px solid var(--blue);
+  font-weight: bold;
+}
+
+.leaflet-control-zoom a:hover {
+  background: var(--blue);
+  color: white;
+}
+
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+

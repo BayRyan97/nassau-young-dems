@@ -2,6 +2,8 @@ import QuoteRotator from './QuoteRotator';
 import NassauCarousel from './NassauCarousel';
 import EventsCalendar from './EventsCalendar';
 import CandidateSpotlight from './CandidateSpotlight';
+import NassauCountyMap from './NassauCountyMap';
+import ContactReps from './ContactReps';
 
 export default function Home() {
   return (
@@ -196,6 +198,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Nassau County Map */}
+      <NassauCountyMap />
+
       {/* Newsletter CTA */}
       <section className="bg-gradient-to-r from-navy to-blue text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -221,6 +226,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Contact Representatives */}
+      <ContactReps />
 
       {/* Footer */}
       <footer className="bg-navy text-white py-12">

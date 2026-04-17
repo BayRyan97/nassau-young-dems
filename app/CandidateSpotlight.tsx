@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 
 interface Candidate {
@@ -24,38 +25,67 @@ const candidates: Candidate[] = [
   }
 ];
 
+const CHAR_LIMIT = 250;
+
+function CandidateCard({ candidate, index }: { candidate: Candidate; index: number }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const shouldTruncate = candidate.bio.length > CHAR_LIMIT;
+  const displayBio = isExpanded || !shouldTruncate 
+    ? candidate.bio 
+    : `${candidate.bio.slice(0, CHAR_LIMIT)}...`;
+
+  return (
+    <article 
+      className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-t-4 border-gold hover:-translate-y-1"
+    >
+      {/* Candidate Photo */}
+      <div className="relative w-full h-80 bg-gradient-to-br from-blue/10 to-sky/10">
+        <Image
+          src={candidate.imageUrl}
+          alt={candidate.name}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+      </div>
+      
+      {/* Candidate Info */}
+      <div className="p-6">
+        <h3 className="text-2xl font-serif font-bold text-navy mb-2">
+          {candidate.name}
+        </h3>
+        <p className="text-blue font-semibold mb-4 text-sm uppercase tracking-wide">
+          {candidate.position}
+        </p>
+        <p className="text-gray-600 text-sm leading-relaxed mb-3">
+          {displayBio}
+        </p>
+        {shouldTruncate && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="text-blue hover:text-navy font-semibold text-sm transition-colors flex items-center gap-1"
+          >
+            {isExpanded ? 'Read less' : 'Read more'}
+            <svg 
+              className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        )}
+      </div>
+    </article>
+  );
+}
+
 export default function CandidateSpotlight() {
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {candidates.map((candidate, index) => (
-        <article 
-          key={index}
-          className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-t-4 border-gold hover:-translate-y-1"
-        >
-          {/* Candidate Photo */}
-          <div className="relative w-full h-80 bg-gradient-to-br from-blue/10 to-sky/10">
-            <Image
-              src={candidate.imageUrl}
-              alt={candidate.name}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          </div>
-          
-          {/* Candidate Info */}
-          <div className="p-6">
-            <h3 className="text-2xl font-serif font-bold text-navy mb-2">
-              {candidate.name}
-            </h3>
-            <p className="text-blue font-semibold mb-4 text-sm uppercase tracking-wide">
-              {candidate.position}
-            </p>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              {candidate.bio}
-            </p>
-          </div>
-        </article>
+        <CandidateCard key={index} candidate={candidate} index={index} />
       ))}
     </div>
   );
