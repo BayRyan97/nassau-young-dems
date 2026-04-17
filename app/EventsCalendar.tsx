@@ -7,6 +7,8 @@ interface CalendarEvent {
   title: string;
   date: Date;
   time: string;
+  location?: string;
+  cost?: string;
   rsvpLink?: string;
 }
 
@@ -14,8 +16,42 @@ const events: CalendarEvent[] = [
   {
     id: 1,
     title: 'Monthly General Meeting',
-    date: new Date(2026, 3, 9), // April 9, 2026 (month is 0-indexed)
+    location: 'Nassau County Democratic Committee Office',
+    rsvpLink: 'https://forms.gle/dXRQqGqBEz4PZEG49'
+  },
+  {
+    id: 2,
+    title: 'Jared Behr Kickoff Fundraiser with Joylette Williams',
+    date: new Date(2026, 3, 26), // April 26, 2026
     time: '6:30 PM',
+    location: 'Pearl Kitchen & Cocktails, Old Bethpage, NY',
+    rsvpLink: 'https://forms.gle/dXRQqGqBEz4PZEG49'
+  },
+  {
+    id: 3,
+    title: 'International Workers Day Rally',
+    date: new Date(2026, 4, 1), // May 1, 2026
+    time: '3:00 PM',
+    location: 'Rosa Parks Hempstead Transit Center',
+    rsvpLink: 'https://forms.gle/dXRQqGqBEz4PZEG49'
+  },
+  {
+    id: 4,
+    title: 'Beach Cleanup with Joe Scianablo & Joylette Williams',
+    date: new Date(2026, 4, 16), // May 16, 2026
+    time: 'TBD',
+    location: 'Jones Beach State Park, Field 6',
+    rsvpLink: 'https://forms.gle/dXRQqGqBEz4PZEG49'
+  },
+  {
+    id: 5,
+    title: 'Mets Game Night',
+    date: new Date(2026, 6, 8), // July 8, 2026
+    time: '7:00 PM',
+    location: 'Citi Field',
+    cost: '$40 per ticketame Night',
+    date: new Date(2026, 6, 8), // July 8, 2026
+    time: '7:00 PM',
     rsvpLink: 'https://forms.gle/dXRQqGqBEz4PZEG49'
   }
 ];
@@ -246,6 +282,25 @@ export default function EventsCalendar() {
                     {monthNames[selectedEvent.date.getMonth()]} {selectedEvent.date.getDate()}, {selectedEvent.date.getFullYear()}
                   </span>
                 </div>
+
+                {selectedEvent.location && (
+                  <div className="flex items-start gap-2">
+                    <svg className="w-5 h-5 text-blue mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span>{selectedEvent.location}</span>
+                  </div>
+                )}
+
+                {selectedEvent.cost && (
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="font-semibold text-accent">{selectedEvent.cost}</span>
+                  </div>
+                )}
               </div>
             </div>
 
