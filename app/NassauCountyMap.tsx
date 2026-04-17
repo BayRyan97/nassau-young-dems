@@ -26,13 +26,13 @@ const Popup = dynamic(
 );
 
 interface GeoJSONFeature {
-  type: string;
+  type: 'Feature';
   properties: any;
   geometry: any;
 }
 
 interface GeoJSONData {
-  type: string;
+  type: 'FeatureCollection';
   features: GeoJSONFeature[];
 }
 
