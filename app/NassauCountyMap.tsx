@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
+import 'leaflet/dist/leaflet.css';
 
 // Dynamically import react-leaflet components to avoid SSR issues
 const MapContainer = dynamic(
@@ -41,6 +42,7 @@ export default function NassauCountyMap() {
   const [countyBoundary, setCountyBoundary] = useState<GeoJSONData | null>(null);
   const [landmarks, setLandmarks] = useState<GeoJSONData | null>(null);
   const [L, setL] = useState<any>(null);
+  const [mapInstance, setMapInstance] = useState<any>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -66,6 +68,15 @@ export default function NassauCountyMap() {
       setLandmarks(landmarksData);
     });
   }, []);
+
+  // Invalidate map size when instance is ready
+  useEffect(() => {
+    if (mapInstance) {
+      setTimeout(() => {
+        mapInstance.invalidateSize();
+      }, 100);
+    }
+  }, [mapInstance]);
 
   if (!mounted || !L) {
     return (
@@ -93,6 +104,10 @@ export default function NassauCountyMap() {
           </h2>
           <p className="text-lg text-gray-700 mb-6">
             Explore Nassau County and our important civic locations. Click on markers to learn more.
+            whenReady={(map) => {
+              setMapInstance(map.target);
+              map.target.invalidateSize();
+            }}
           </p>
         </div>
 
