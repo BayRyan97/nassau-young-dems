@@ -22,7 +22,7 @@ const events: CalendarEvent[] = [
   {
     id: 2,
     title: 'Jared Behr Kickoff Fundraiser with Joylette Williams',
-    date: new Date(2026, 3, 26), // April 26, 2026
+    date: new Date(2026, 3, 21), // April 21, 2026
     time: '6:30 PM',
     location: 'Pearl Kitchen & Cocktails, Old Bethpage, NY',
     rsvpLink: 'https://forms.gle/dXRQqGqBEz4PZEG49'
