@@ -151,7 +151,6 @@ export default function NassauCarousel() {
                     setCurrentIndex(index);
                     setFade(true);
                   }, 300);
-                  setResetTimer(prev => prev + 1); // Reset the timer
                 }}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex ? 'bg-blue w-8' : 'bg-gray-300 w-2 hover:bg-gray-400'
