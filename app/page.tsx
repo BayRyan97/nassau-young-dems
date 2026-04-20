@@ -199,11 +199,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Nassau County Map */}
-      <NassauCountyMap />
-
       {/* Contact Form */}
       <ContactForm />
+
+      {/* Nassau County Map */}
+      <NassauCountyMap />
 
       {/* Contact Representatives */}
       <ContactReps />
