@@ -253,6 +253,9 @@ export default function Home() {
           </div>
           <div className="border-t border-white/10 pt-8 text-center text-sm text-muted">
             <p>© 2026 Nassau County Young Democrats. All rights reserved.</p>
+            <p className="mt-2 text-xs text-white/40">
+              This website is independently owned and operated. Not officially affiliated with any political organization.
+            </p>
           </div>
         </div>
       </footer>
