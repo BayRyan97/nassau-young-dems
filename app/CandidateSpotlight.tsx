@@ -36,9 +36,17 @@ const CHAR_LIMIT = 250;
 function CandidateCard({ candidate, index }: { candidate: Candidate; index: number }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const shouldTruncate = candidate.bio.length > CHAR_LIMIT;
-  const displayBio = isExpanded || !shouldTruncate 
-    ? candidate.bio 
-    : `${candidate.bio.slice(0, CHAR_LIMIT)}...`;
+  
+  // Find the next space after CHAR_LIMIT to avoid cutting mid-word
+  const getTruncatedBio = () => {
+    if (isExpanded || !shouldTruncate) return candidate.bio;
+    
+    const nextSpace = candidate.bio.indexOf(' ', CHAR_LIMIT);
+    const cutPoint = nextSpace === -1 ? CHAR_LIMIT : nextSpace;
+    return `${candidate.bio.slice(0, cutPoint)}...`;
+  };
+  
+  const displayBio = getTruncatedBio();
 
   return (
     <article 
