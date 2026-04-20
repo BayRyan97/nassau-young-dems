@@ -1,4 +1,3 @@
-import QuoteRotator from './QuoteRotator';
 import NassauCarousel from './NassauCarousel';
 import EventsCalendar from './EventsCalendar';
 import CandidateSpotlight from './CandidateSpotlight';
@@ -27,27 +26,6 @@ export default function Home() {
           </div>
         </div>
       </header>
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue to-sky text-white py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(59,130,246,0.18)_0%,transparent_70%)] pointer-events-none"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6">
-              Organizing for Change<br />in Nassau County
-            </h2>
-            <QuoteRotator variant="hero" />
-            <a 
-              href="https://forms.gle/dXRQqGqBEz4PZEG49"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-4 bg-gold text-navy font-bold rounded-lg hover:bg-yellow-400 transition-colors shadow-lg"
-            >
-              Get Involved →
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* News Feed Section */}
       <section id="news" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -167,35 +145,6 @@ export default function Home() {
             </p>
           </div>
           <EventsCalendar />
-        </div>
-      </section>
-
-      {/* Events Section */}
-      <section id="events" className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif font-bold text-navy mb-8">Get Involved</h2>
-          
-          {/* Call to Action */}
-          <div className="bg-gradient-to-r from-blue to-sky rounded-2xl p-8 text-white mb-8 shadow-xl">
-            <div className="flex flex-col md:flex-row gap-6 items-center">
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl md:text-3xl font-bold mb-2">Join Our Movement</h3>
-                <p className="text-lg text-white/90 mb-1">Monthly meetings at the Nassau County Democratic Committee Office</p>
-                <p className="text-white/75 text-sm mb-4">Connect with fellow young progressives, organize, and plan our next actions to build a better Nassau County.</p>
-                <a 
-                  href="https://forms.gle/dXRQqGqBEz4PZEG49"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-6 py-3 bg-white text-blue font-bold rounded-lg hover:bg-gold hover:text-navy transition-colors"
-                >
-                  Join Our Next Meeting →
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Quote Section */}
-          <QuoteRotator />
         </div>
       </section>
 
