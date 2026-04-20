@@ -3,7 +3,7 @@ export default function ContactReps() {
     <section className="bg-gradient-to-br from-navy to-blue py-16 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-serif font-bold text-white mb-6">
-          Make Your Voice Heard
+          Contact Your Representatives
         </h2>
         <p className="text-xl text-white/90 mb-8 leading-relaxed">
           Democracy works when we participate. Contact your local, state, and federal representatives 

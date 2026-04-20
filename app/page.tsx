@@ -3,6 +3,7 @@ import NassauCarousel from './NassauCarousel';
 import EventsCalendar from './EventsCalendar';
 import CandidateSpotlight from './CandidateSpotlight';
 import NassauCountyMap from './NassauCountyMap';
+import ContactForm from './ContactForm';
 import ContactReps from './ContactReps';
 
 export default function Home() {
@@ -201,31 +202,8 @@ export default function Home() {
       {/* Nassau County Map */}
       <NassauCountyMap />
 
-      {/* Membership CTA */}
-      <section className="bg-white py-16 border-t-4 border-gold">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-serif font-bold mb-4 text-navy">Make Your Voice Heard</h2>
-          <p className="text-gray-700 mb-8 text-lg">Join our mailing list and become a member to stay connected with our movement</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a 
-              href="https://mailchi.mp/85b597e87fc3/join-the-nassau-county-young-democrats"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-blue text-white font-bold rounded-lg hover:bg-navy transition-colors shadow-lg"
-            >
-              Become a Member
-            </a>
-            <a 
-              href="https://secure.actblue.com/donate/nassauyoungdems"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-white text-navy font-semibold rounded-lg hover:bg-light transition-colors border-2 border-navy"
-            >
-              Support Our Work
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* Contact Form */}
+      <ContactForm />
 
       {/* Contact Representatives */}
       <ContactReps />
@@ -243,7 +221,6 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-muted">
                 <li><a href="https://forms.gle/dXRQqGqBEz4PZEG49" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Join Our Next Meeting</a></li>
                 <li><a href="https://mailchi.mp/85b597e87fc3/join-the-nassau-county-young-democrats" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Become a Member</a></li>
-                <li><a href="https://secure.actblue.com/donate/nassauyoungdems" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">Donate</a></li>
               </ul>
             </div>
             <div>
