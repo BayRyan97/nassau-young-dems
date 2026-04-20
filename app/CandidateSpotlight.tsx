@@ -22,6 +22,12 @@ const candidates: Candidate[] = [
     position: "Democratic Nominee for Nassau County Legislative District 4",
     bio: "Mike is a 35-year-old lifelong resident of southwestern Nassau County, having grown up in East Rockaway, and currently resides in Long Beach with his wife, Arlette, a non-profit immigration attorney, and their two-year-old son, Theodore. Mike is an experienced litigator, who has worked in both the private and public sector as an attorney, and plans on using his decade of experience in law practice to advocate for the needs of the many Nassau County residents who feel forgotten or, in many cases, completely rejected by the powers that be. If elected, Mike will advocate for countywide legislation to address the massive affordability crisis facing all Nassau County residents, perhaps none more than younger folks, small businesses, first time homebuyers, and parents of young children. With your support, Mike knows that we can create a more accessible, more forward-thinking Nassau County, with a future we can all be excited about. When Mike is not working as a full-time government attorney or campaigning, he is taking day trips with his family, reading history, chipping away at the eternal list of films on his Letterboxd watchlist, keeping up on the news out of Washington, D.C. (with gritted teeth), or strumming an acoustic guitar.",
     imageUrl: "/candidates/mike-pentola.jpg"
+  },
+  {
+    name: "Dean Tarulli",
+    position: "Candidate for New York State Assembly",
+    bio: "Dean Tarulli is a tried and true, 6th Gen Long Islander. A unique candidate with experience in every level of government; Federal, State, and Local. As an Environmental Project Manager, Tarulli has administered billions of dollars in Hurricane Sandy Relief to families and communities across Long Island. He later managed the construction of Long Island's most critical coastal defense infrastructure with a focus in preparedness. \"As an Assembly member, I'll prioritize bringing State and Federal funds back to Long Island for public safety, infrastructure and schools to offset the tax hikes that are crushing Long Island families. My affordability agenda includes a property insurance reform plan projected to lower premiums by at least 35% for New York property owners, saving taxpayers billions of dollars statewide.\"",
+    imageUrl: "/candidates/dean-tarulli.jpg"
   }
 ];
 
