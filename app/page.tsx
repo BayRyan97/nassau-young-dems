@@ -29,9 +29,10 @@ export default function Home() {
       </header>
 
       {/* Quote Section */}
-      <section className="bg-white py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <QuoteRotator />
+      <section className="bg-gradient-to-br from-blue to-sky text-white py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(59,130,246,0.18)_0%,transparent_70%)] pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <QuoteRotator variant="hero" />
         </div>
       </section>
 
