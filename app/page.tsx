@@ -1,3 +1,4 @@
+import QuoteRotator from './QuoteRotator';
 import NassauCarousel from './NassauCarousel';
 import EventsCalendar from './EventsCalendar';
 import CandidateSpotlight from './CandidateSpotlight';
@@ -26,6 +27,13 @@ export default function Home() {
           </div>
         </div>
       </header>
+
+      {/* Quote Section */}
+      <section className="bg-white py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <QuoteRotator />
+        </div>
+      </section>
 
       {/* News Feed Section */}
       <section id="news" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
