@@ -136,19 +136,6 @@ export default function NassauCountyMap() {
             })}
           </MapContainer>
         </div>
-
-        {/* Legend */}
-        <div className="mt-6 bg-white rounded-xl p-6 shadow-lg">
-          <h3 className="text-lg font-bold text-navy mb-4">Civic Locations</h3>
-          <div className="flex items-center justify-center gap-3">
-            <img 
-              src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png" 
-              alt="Marker" 
-              className="w-6 h-6"
-            />
-            <span className="text-sm text-gray-700">Click any marker to view details</span>
-          </div>
-        </div>
       </div>
     </section>
   );
