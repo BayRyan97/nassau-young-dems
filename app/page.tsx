@@ -22,7 +22,7 @@ export default function Home() {
             <nav className="hidden md:flex gap-6">
               <a href="#news" className="text-white hover:text-gold transition-colors">Our Priorities</a>
               <a href="#events" className="text-white hover:text-gold transition-colors">Next Meeting</a>
-              <a href="https://forms.gle/dXRQqGqBEz4PZEG49" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors">Get Involved</a>
+              <a href="#contact" className="text-white hover:text-gold transition-colors">Get Involved</a>
             </nav>
           </div>
         </div>
